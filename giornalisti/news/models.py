@@ -3,9 +3,9 @@ from django.db import models
 
 class Giornalista(models.Model):
     nome = models.CharField(max_length=50)
-    conome = models.CharField(max_length=50)
+    cognome = models.CharField(max_length=50)
     def __str__(self):
-        return (f"{self.nome} {self.conome}")
+        return (self.nome+" "+self.cognome)
 class Articolo(models.Model):
 
     """ modello generico di articolo"""
