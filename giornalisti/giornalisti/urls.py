@@ -23,7 +23,7 @@ from news.views import contacts as contacts
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('',home),
+    path('',home,name='homeview'),
     path('contacts/',contacts),
     
 ]
