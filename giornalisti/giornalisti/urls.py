@@ -18,12 +18,13 @@ from django.urls import path
 
 from news.views import home as home
 from news.views import contacts as contacts
-
+from news.views import detail as detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('',home,name='homeview'),
     path('contacts/<int:number>',contacts),
+    path('detail/<int:pk>',detail),
     
 ]
