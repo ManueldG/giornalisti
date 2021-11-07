@@ -20,10 +20,12 @@
 {% endfor %}    
 </ul>
 
+<br> <br>
+
 <ul>
 {% for articolo in articoli %}
     <li>
-    titolo {{ articolo.titolo }} contenuto{{  articolo.contenuto }} Autore {{ articolo.autore_id }}
+    <h2> {{ articolo.titolo }} </h2> <p>{{  articolo.contenuto }}</p> Autore: {{ articolo.giornalista }} <br> <br>
     </li>
 {% endfor %}    
 </ul>

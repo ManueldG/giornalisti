@@ -24,6 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('',home,name='homeview'),
-    path('contacts/',contacts),
+    path('contacts/<int:number>',contacts),
     
 ]

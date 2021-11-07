@@ -14,9 +14,9 @@ def home(request):
 
     return render(request,"home.html/",context)
 
-def contacts(request):    
+def contacts(request,number):    
 
-    context = {"nome":"Manuel","cognome":"della Gala","telephone":"34712345",}    
+    context = {"nome":"Manuel","cognome":"della Gala","telephone":"34712345","number":number}    
     
     return render(request,"contacts.html",context)
 
