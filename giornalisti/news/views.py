@@ -21,13 +21,13 @@ def contacts(request,number):
     return render(request,"contacts.html",context)
 
 def detail(request,pk):
-    
+
     giornalisti = Giornalista.objects.all()
-    articoli = Articolo.objects.all()
+    articolo = Articolo.objects.all()
 
     print("pk: "+str(pk))
 
-    context = {"articoli":articoli,"giornalisti":giornalisti,"pk":pk}
+    context = {"articolo":articolo[pk],"giornalisti":giornalisti,"pk":pk}
     
     return render(request,"ArticoloDetailView.html",context)
 
