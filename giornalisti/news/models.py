@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 class Giornalista(models.Model):
     nome = models.CharField(max_length=50)
     cognome = models.CharField(max_length=50)
@@ -13,4 +14,8 @@ class Articolo(models.Model):
 
     def __str__(self):
         return (self.titolo)
+    
+    def get_absolute_url(self):
+        return reverse("details", kwargs={"pk": self.pk})
+    
     

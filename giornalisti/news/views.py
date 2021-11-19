@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 
+
 from .models import Articolo, Giornalista
 
 
@@ -22,11 +23,11 @@ def contacts(request,number):
 def detail(request,pk):
 
     giornalisti = get_object_or_404(Giornalista,pk=pk)
-    articolo = Articolo.objects.all()
+    articolo = Articolo.objects.get(giornalista=giornalisti)
 
-    print("pk: "+str(pk))
+    
 
-    context = {"articolo":articolo[pk],"giornalisti":giornalisti,"pk":pk}
+    context = {"articolo":articolo,"giornalisti":giornalisti,"pk":pk}
     
     return render(request,"ArticoloDetailView.html",context)
 

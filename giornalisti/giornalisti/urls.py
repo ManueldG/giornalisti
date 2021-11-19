@@ -25,7 +25,7 @@ urlpatterns = [
     
     path('', include('news.urls')),
        
-    path('contacts/<int:number>',contacts),
-    path('detail/<int:pk>',detail),
+    path('contacts/<int:number>',contacts,name="contacts"),
+    path('detail/<int:pk>',detail,name='details'),
     
 ]
